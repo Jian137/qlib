@@ -63,12 +63,11 @@ Features released before 2021 are not listed here.
   <img src="docs/_static/img/logo/1.png" />
 </p>
 
-Qlib is an open-source, AI-oriented quantitative investment platform that aims to realize the potential, empower research, and create value using AI technologies in quantitative investment, from exploring ideas to implementing productions. Qlib supports diverse machine learning modeling paradigms, including supervised learning, market dynamics modeling, and reinforcement learning.
+Qlib 是一个开源的、面向 AI 的量化投资平台，旨在利用 AI 技术在量化投资中发挥潜力、赋能研究、创造价值，从探索想法到实施产品。Qlib 支持多种机器学习建模范式，包括监督学习、市场动态建模和强化学习。
 
-An increasing number of SOTA Quant research works/papers in diverse paradigms are being released in Qlib to collaboratively solve key challenges in quantitative investment. For example, 1) using supervised learning to mine the market's complex non-linear patterns from rich and heterogeneous financial data, 2) modeling the dynamic nature of the financial market using adaptive concept drift technology, and 3) using reinforcement learning to model continuous investment decisions and assist investors in optimizing their trading strategies.
+Qlib 中发布了越来越多不同范式的 SOTA Quant 研究著作/论文，以共同解决量化投资中的关键挑战。例如，1） 使用监督学习从丰富的异构金融数据中挖掘市场复杂的非线性模式，2） 使用自适应概念漂移技术对金融市场的动态性质进行建模，以及 3） 使用强化学习对持续投资决策进行建模，并帮助投资者优化他们的交易策略。
 
-It contains the full ML pipeline of data processing, model training, back-testing; and covers the entire chain of quantitative investment: alpha seeking, risk modeling, portfolio optimization, and order execution. 
-For more details, please refer to our paper ["Qlib: An AI-oriented Quantitative Investment Platform"](https://arxiv.org/abs/2009.11189).
+它包含数据处理、模型训练、回溯测试的完整 ML 管道;并涵盖量化投资的整个链条：Alpha Seeking、Risk Modeling、Portfolio Optimization 和 Order Execution。 有关更多详细信息，请参阅我们的论文 ["Qlib: An AI-oriented Quantitative Investment Platform"](https://arxiv.org/abs/2009.11189).
 
 
 <table>
@@ -292,10 +291,10 @@ We recommend users to prepare their own data if they have a high-quality dataset
   ```
  -->
 
-## Auto Quant Research Workflow
-Qlib provides a tool named `qrun` to run the whole workflow automatically (including building dataset, training models, backtest and evaluation). You can start an auto quant research workflow and have a graphical reports analysis according to the following steps: 
+## 自动量化研究工作流程
+Qlib 提供了一个名为 to run entire workflow automatically （包括构建数据集、训练模型、回测和评估） 的工具。您可以按照以下步骤启动自动量化研究工作流程并进行图形报告分析：`qrun`
 
-1. Quant Research Workflow: Run  `qrun` with lightgbm workflow config ([workflow_config_lightgbm_Alpha158.yaml](examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml) as following.
+1. Quant 工作流程: 使用 lightgbm 工作流程配置 ([workflow_config_lightgbm_Alpha158.yaml](examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml) as following.
     ```bash
       cd examples  # Avoid running program under the directory contains `qlib`
       qrun benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
