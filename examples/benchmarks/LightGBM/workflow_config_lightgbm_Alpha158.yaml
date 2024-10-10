@@ -1,6 +1,6 @@
-qlib_init:
-    provider_uri: "~/.qlib/qlib_data/cn_data"
-    region: cn
+qlib_init: # 初始化
+    provider_uri: "~/.qlib/qlib_data/cn_data" # 加载数据存储位置
+    region: cn # 地区，以China-stock 模式初始化。
 market: &market csi300
 benchmark: &benchmark SH000300
 data_handler_config: &data_handler_config
@@ -29,7 +29,7 @@ port_analysis_config: &port_analysis_config
             close_cost: 0.0015
             min_cost: 5
 task:
-    model:
+    model: # 用于训练和推理的模型参数
         class: LGBModel
         module_path: qlib.contrib.model.gbdt
         kwargs:
@@ -54,7 +54,7 @@ task:
                 train: [2008-01-01, 2014-12-31]
                 valid: [2015-01-01, 2016-12-31]
                 test: [2017-01-01, 2020-08-01]
-    record: 
+    record: # record 字段是关于模块中的参数的。 负责以标准格式跟踪训练过程和结果，例如信息系数 （IC） 和回测。
         - class: SignalRecord
           module_path: qlib.workflow.record_temp
           kwargs: 
